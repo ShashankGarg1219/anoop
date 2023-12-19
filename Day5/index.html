@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>**
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script src="fetchGET.js"></script>
+ <script src="apiFetchPOST.js"></script>
+</head>
+<body>
+ <div>
+  <h2>Employee Registration</h2>
+  <label>Name</label>
+  <input id="empname" type="text" value=""/>
+  <label>Salary</label>
+  <input id="salary" type="number" value=""/>
+  <input type="submit" value="Ok" onclick=userForm()>
+</div>
+<hr>
+  <h2>Filter Record</h2>
+  <label>By Salary</label>
+  <input id="salary" type="number" value=""/>
+  <input type="submit" value="Ok" onclick=userReg()>
+</div>
+<div id="empdata" style="background-color: antiquewhite; height: auto;"></div>
+<script>
+ function userReg(){
+  let ename = document.getElementById("empname").value;
+  let salary = document.getElementById("salary").value;
+  postData(ename, salary)
+ }
+ function userForm(){
+  let salary = parseInt(document.getElementById("salary").value);
+  // console.log(typeof salary)
+  getData(salary)
+ }
+</script>
+</body>
+</html>
+
+
+================================================================================

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <script src="fetchGET.js"></script>
+</head>
+
+<body>
+    <div>
+        <label>User name</label>
+        <input id="username" type="text" value="" />
+        <input id="password" type="password" value="" />
+        <input type="submit" value="Ok" onclick=userform()>
+    </div>
+    <script>
+        function userform(){
+            let username = document.getElementById("username").value;
+            let pwd = document.getElementById("password").value;
+            console.log(username)
+            console.log(pwd)
+        }
+    </script>
+</body>
+
+</html>
